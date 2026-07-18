@@ -1,5 +1,4 @@
-GUIDANCE TO USE THE FILES
-Hi!
+== GUIDANCE TO USE THE FILES ==
 Here's some guidance for you guys to try on my pre-portfolio (unofficial/kid level)!
 1. Create 3 subfolders inside the math_club folder, respectively 'base', 'css', and 'pages'
 2. Stack all the html files into the pages folder
