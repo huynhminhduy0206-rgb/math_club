@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Club - Quản lý cuộc họp</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo"><i class="bi bi-calculator-fill"></i> Math Club</div>
+        <a href="dashboard.html" class="nav-link"><i class="bi bi-grid-fill"></i> Dashboard</a>
+        <a href="members.html" class="nav-link"><i class="bi bi-people-fill"></i> Thành viên</a>
+        <a href="lessons.html" class="nav-link"><i class="bi bi-journal-text"></i> Giáo án</a>
+        <a href="meetings.html" class="nav-link active"><i class="bi bi-calendar-event-fill"></i> Cuộc họp</a>
+        <a class="nav-link" href="#" id="btnLogout"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a>
+    </div>
+
+    <div class="content">
+        <div class="d-flex justify-content-between align-items-start mb-5">
+            <div>
+                <h2>Quản lý cuộc họp</h2>
+                <p class="text-secondary">CRUD cuộc họp CLB Toán</p>
+            </div>
+
+            <button class="btn btn-main-small" data-bs-toggle="modal" data-bs-target="#meetingModal"><i class="bi bi-plus-circle"></i> Thêm cuộc họp</button>
+        </div>
+
+        <div class="card-dark p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="mb-0">Danh sách cuộc họp</h5>
+                <input type="text" class="form-control search-box" placeholder="Tìm kiếm..." style="max-width:380px;">
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table table-dark table-hover table-bordered table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên cuộc họp</th>
+                            <th>Chủ đề</th>
+                            <th>Giảng viên</th>
+                            <th>Ngày học</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Phương trình bậc hai</td>
+                            <td>Đại số</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>15/06/2026</td>
+                            <td><span class="badge bg-success">Hoàn thành</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-success-custom btn-sm"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-danger-custom btn-sm"><i class="bi bi-trash-fill"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Bất đẳng thức Cauchy</td>
+                            <td>Số học</td>
+                            <td>Trần Thị B</td>
+                            <td>20/06/2026</td>
+                            <td><span class="badge bg-warning text-dark">Sắp diễn ra</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-success-custom btn-sm"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-danger-custom btn-sm"><i class="bi bi-trash-fill"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Hình học Oxy</td>
+                            <td>Hình học</td>
+                            <td>Lê Minh C</td>
+                            <td>25/06/2026</td>
+                            <td><span class="badge bg-primary">Đang chuẩn bị</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-success-custom btn-sm"><i class="bi bi-pencil-fill"></i></button>
+                                    <button class="btn btn-danger-custom btn-sm"><i class="bi bi-trash-fill"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="meetingModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm cuộc họp</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                
+                <!-- Form CRUD Meeting -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Tên cuộc họp</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Chủ đề</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Giảng viên</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Ngày học</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Nội dung</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button class="btn btn-main">Lưu cuộc họp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../base/meetings.js"></script>
+    <script type="module" src="../base/global.js"></script>
+</body>
+</html>

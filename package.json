@@ -1,0 +1,17 @@
+{
+  "name": "math_club",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "expressjs": "^1.0.1",
+    "firebase": "^12.14.0"
+  }
+}
