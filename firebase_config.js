@@ -27,16 +27,9 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// Cấu hình firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyAQMvCGvH_2OA7y7rUVMaENXErHjr-wyYI",
-  authDomain: "math-club-duy-h.firebaseapp.com",
-  projectId: "math-club-duy-h",
-  storageBucket: "math-club-duy-h.firebasestorage.app",
-  messagingSenderId: "860898088117",
-  appId: "1:860898088117:web:7ecd88e03369a6d79c5afc",
-  measurementId: "G-4FZFHVKL28"
-};
+// firebaseConfig
+const firebaseConfig = {};
+// Insert yours here
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
